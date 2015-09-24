@@ -1,19 +1,38 @@
 <form role="form">
-  <div class="form-group">
-  	<div class="form-group">
+  <div class="form-group col-sm-3">
+  	<div>
     	<label for="name">Please, enter your name:</label>
     	<input type="name" class="form-control" id="name">
   	</div>
+    <div>
     	<label for="email">Enter your e-mail address:</label>
     	<input type="email" require="requeire" class="form-control" id="email">
   	</div>
-  	</div>
+  	<div>
     	<label for="email">Enter e-mail address recipient:</label>
     	<input type="email" require="requeire" class="form-control" id="email">
   	</div>
-  	</div>
+  	<div>
     	<label for="email">Enter the text of your message:</label>
     	<input type="email" require="requeire" class="form-control" id="email">
   	</div>
+    <div>
+    <label for="upload">Upload Files:</label>
+      <button class="btn btn-default" ngf-select="uploadFiles($files)" multiple
+          accept="image/*" ngf-max-height="1000" ngf-max-size="1MB" id="upload">
+      Select Files</button>
+    <br><br>
+      Files:
+    <ul>
+      <li ng-repeat="f in files" style="font:smaller">{{f.name}} {{f.$error}} {{f.$errorParam}}
+       <span class="progress" ng-show="f.progress >= 0">
+         <div style="width:{{f.progress}}%"  
+             ng-bind="f.progress + '%'"></div>
+        </span>
+      </li>     
+    </ul>
+    {{errorMsg}}
+    </div>
+
   <button type="submit" class="btn btn-default">Submit</button>
 </form>

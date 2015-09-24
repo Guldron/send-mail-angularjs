@@ -4,6 +4,7 @@ var gulp = require('gulp'),
 	connect = require('gulp-connect');
 
 var bowerComponents = ['app/bower_components/angular/angular.min.js',
+					   'app/bower_components/ng-file-upload/ng-file-upload.min.js',
 					   'app/bower_components/jquery/dist/jquery.min.js',
 					   'app/bower_components/bootstrap/dist/js/bootstrap.min.js'];
 

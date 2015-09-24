@@ -3,6 +3,6 @@
 'use strict';
 
 	angular
-		.module('app', ['app.constants'])
+		.module('app', ['app.constants','ngFileUpload'])
 
 })();
